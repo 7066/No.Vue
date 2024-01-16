@@ -2,7 +2,6 @@
 const theme = useTheme();
 const onClick = () => {
   theme.value = "night";
-  console.log("????");
 };
 </script>
 
