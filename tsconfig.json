@@ -20,6 +20,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    ".d.ts",
+    "./.eslintrc-auto-imports.d.ts",
+    "./.eslintrc-auto-components.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
