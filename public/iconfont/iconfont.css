@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4097030 */
+  src: url('iconfont.woff2?t=1686212844097') format('woff2'),
+       url('iconfont.woff?t=1686212844097') format('woff'),
+       url('iconfont.ttf?t=1686212844097') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-caidan:before {
+  content: "\e61b";
+}
+
+.icon-lianjie:before {
+  content: "\eadc";
+}
+
+.icon-mokuai:before {
+  content: "\e610";
+}
+
+.icon-iframe:before {
+  content: "\e649";
+}
+
+.icon-color-choice:before {
+  content: "\e886";
+}
+
+.icon-menu:before {
+  content: "\e60a";
+}
+
+.icon-permissions:before {
+  content: "\e656";
+}
+
+.icon-role:before {
+  content: "\e60f";
+}
+
+.icon-user:before {
+  content: "\eb29";
+}
+
+.icon-set:before {
+  content: "\e682";
+}
+
+.icon-log:before {
+  content: "\e63e";
+}
+
+.icon-system:before {
+  content: "\e603";
+}
+
+.icon-github:before {
+  content: "\e8c6";
+}
+
+.icon-language:before {
+  content: "\e611";
+}
+
