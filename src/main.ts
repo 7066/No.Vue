@@ -1,8 +1,7 @@
 import { createApp } from "vue";
-import "./style.css";
 import App from "./App.vue";
 import "./style";
-
+ 
 const app = createApp(App);
-console.log("???");
+console.log("???"); 
 app.mount("#app");
