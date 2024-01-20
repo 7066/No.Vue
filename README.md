@@ -1,39 +1,22 @@
-# No.Vue
+首页
 
-基于 `Vite` 搭建的 `Vue 3` `TypeScript` 框架
+自动引入
+实现 vue vue-router 接口自动引入，无需手动引入
+实现 element-plus 组件按需引入，项目中 components 自动引入，无需手动引入
 
-### Star
+模块化
+路由自动注册，Store 数据持久化 自动注册
 
-`yarn` `yarn dev`
+代理
+axios 实现路由拦截，处理接口异常
 
-### Main
+特殊化
+换肤，国际化，脚手架
 
-`Vue 3` `Vue Router 4` `Pinia` `Axios`
-
-### AutoImport
-
-`vue` `vue-router` `src/auto-imports` `src/components`
-
-### Modular
-
-`route` `sevice` `store` `locale`
-
-### CLI
-
-`yarn new module` `yarn new component`
-
-### Tools
-
-`request(axios)` `use{Module}Store` `useLocale` `useTopic(root)`
-
-### Format
-
+格式化
 `ESLint` `Prettier` `Husky` `Lint-staged`
 
-### Ability
+目录结构
 
-`静态菜单+动态模块按钮权限 or 动态路由` `换肤` `国际化` `分辨率兼容`
-
-### Build
-
-`按需加载` `拆包` `gzip`
+演示
+组件使用，接口请求拦截，接口代理，换肤，国际化

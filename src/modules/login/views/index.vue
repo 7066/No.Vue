@@ -1,101 +1,63 @@
-<template>
-  <div class="login-wrap">
-    <div class="special-wrap">
-      <no-special></no-special>
-    </div>
-    <h1 class="title">
-      <a
-        href="https://github.com/liliiliiilil/No.Vue/tree/element-plus"
-        target="_blank"
-        >壹贰叁壹</a
-      >
-    </h1>
+<script setup lang="ts">
+import { getUserInfo, history } from "@/login/service";
 
-    <el-form
-      class="form-block"
-      label-position="top"
-      label-width="100px"
-      :model="form"
-      style="max-width: 460px"
-    >
-      <el-form-item :label="$t('login.Account')">
-        <el-input
-          v-model="form.account"
-          :placeholder="$t('global.pleaseInput', { name: $t('login.Account') })"
-        />
-      </el-form-item>
-      <el-form-item :label="$t('login.Password')">
-        <el-input
-          type="password"
-          show-password
-          v-model="form.password"
-          :placeholder="
-            $t('global.pleaseInput', { name: $t('login.Password') })
-          "
-        />
-        <el-text style="margin-left: auto">
-          {{ $t("login.ForgotPassword") }}</el-text
-        >
-      </el-form-item>
-      <el-form-item class="operate-button">
-        <el-button type="primary" @click="onLogin"
-          >{{ $t("login.Login") }}
-        </el-button>
-        <el-button type="primary" plain>
-          {{ $t("login.Register") }}
-        </el-button>
-      </el-form-item>
-    </el-form>
-  </div>
-</template>
-<script lang="ts" setup>
-const form = reactive({
-  account: "admin",
-  password: "admin2023",
-});
-const router = useRouter();
-const onLogin = () => {
-  router.replace("/helloworld");
+// const locale = useLocale();
+const route = useRoute();
+console.log(route, "router??--");
+const theme = useTheme();
+const onLLL = () => {
+  //   locale.value = "zh";
+  theme.value = "light";
+};
+
+const onEEE = () => {
+  //   locale.value = "en";
+  theme.value = "dark";
+};
+
+const onTTT = () => {
+  //   locale.value = "tw";
+  theme.value = "red";
+};
+const onAxios = () => {
+  getUserInfo().then((resp: any) => {
+    console.log(resp, "??");
+  });
+  history().then((resp: any) => {
+    console.log(resp, "??");
+  });
 };
 </script>
-<style lang="scss" scoped>
-.login-wrap {
-  border: 6px solid var(--el-color-primary);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .special-wrap {
-    position: absolute;
-    top: 10px;
-    right: 24px;
-  }
-  .title {
-    margin-bottom: 24px;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    font-weight: bolder;
-    padding: 0 12px;
-    color: var(--el-color-primary);
-    user-select: none;
-    &:hover {
-      border-bottom: 2px solid var(--el-color-primary);
-    }
-  }
-  .form-block {
-    width: 60%;
-    margin-bottom: 24px;
-    .operate-button {
-      .el-button {
-        width: 100%;
-      }
-      .el-button + .el-button {
-        margin-left: 0px;
-        margin-top: 12px;
-      }
-    }
-  }
-}
-</style>
+<template>
+  <p v-t="{ path: 'login.hi', args: { name: '王总' } }"></p>
+
+  <i18n-t keypath="login.info" tag="p">
+    <template v-slot:action>
+      <a
+        target="_blank"
+        :href="'http://www.baidu.com'"
+        v-t="{ path: 'login.change' }"
+      ></a>
+    </template>
+    <template v-slot:limit>
+      <span>2222</span>
+    </template>
+  </i18n-t>
+
+  <el-row class="mb-4">
+    <el-button>Default</el-button>
+    <el-button type="primary" @click="onEEE">toEN</el-button>
+    <el-button type="primary" @click="onLLL">toZH</el-button>
+    <el-button type="primary" @click="onTTT">toTW</el-button>
+    <el-button type="success" @click="onAxios">getUserInfo</el-button>
+    <el-button type="info">Info</el-button>
+    <el-button type="warning">Warning</el-button>
+    <el-button type="danger">Danger</el-button>
+  </el-row>
+
+  <icon-Compass />
+
+  <el-icon size="36"><icon-CaretLeft /></el-icon>
+</template>
+
+<style scoped></style>

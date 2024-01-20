@@ -1,15 +1,15 @@
 import { createApp } from "vue";
+import App from "@/global/views/index.vue";
 import { createPinia } from "pinia";
-import Global from "@/global/views/index.vue";
-import "./style/normalize.css";
-import "./style/variable.css";
-import "./style/customize.scss";
+import "./mock"; // 请求拦截模拟接口 mockjs
+import "~/style"; // 基础样式
 
-const app = createApp(Global);
+const app = createApp(App);
+
 const pinia = createPinia();
 
 app.use(router);
+
 app.use(pinia);
 app.use(i18n);
-
 app.mount("#app");
