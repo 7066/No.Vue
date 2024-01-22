@@ -78,6 +78,7 @@
     "watchPostEffect": true,
     "watchSyncEffect": true,
     "initTheme": true,
-    "getThemes": true
+    "getThemes": true,
+    "useGlobalStore": true
   }
 }

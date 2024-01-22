@@ -61,6 +61,7 @@ declare global {
   const useAttrs: typeof import('vue')['useAttrs']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
+  const useGlobalStore: typeof import('./src/modules/global/store')['useGlobalStore']
   const useHomeStore: typeof import('./src/modules/home/store')['useHomeStore']
   const useLink: typeof import('vue-router')['useLink']
   const useLocale: typeof import('./src/hooks/i18n')['useLocale']
