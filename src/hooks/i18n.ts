@@ -1,8 +1,6 @@
 import { createI18n } from "vue-i18n";
 import { Ref, ref, watch } from "vue";
 
-console.log("i18n");
-
 // 翻译源
 const messages = {} as {
   [key: string]: {

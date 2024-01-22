@@ -1,12 +1,4 @@
 <script setup lang="ts">
-// import { initTheme } from "@/global/service";
-
-// initTheme();
-
-// 主题初始化
-setTimeout(() => {
-  initTheme();
-}, 1000);
 const themes = getThemes();
 </script>
 <template>
