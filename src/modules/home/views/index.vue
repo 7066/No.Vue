@@ -12,4 +12,8 @@ const onClick = () => {
   <div @click="onClick">ffff</div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.b {
+  color: red;
+}
+</style>
