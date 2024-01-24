@@ -18,15 +18,9 @@ if (message.includes("---PLOP-TRIGGER")) {
     console.info(`\x1B[31m禁止使用括号如: feat()`);
     process.exit(1);
   }
-  const _type = message.match(
-    /['feat','component','fix','format','style','refactor']/,
-  );
-  console.log(_type, "_type?");
-  const _ = message.replace(
-    /['feat','component','fix','format','style','refactor',':']/,
-    "",
-  );
-  process.exit(1);
-  console.log(_);
-  // const _ = message.replace("---PLOP-TRIGGER", "");
+  const T = message.match(/feat|component|fix|format|style|refactor/g);
+  const _ = message.replace(/feat|component|fix|format|style|refactor|:/g, "");
+
+  fs.writeFileSync(".git/COMMIT_EDITMSG", T[0] + ":" + emoji[T[0]] + _);
+  process.exit(0);
 }
