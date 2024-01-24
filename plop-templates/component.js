@@ -1,5 +1,5 @@
 export default {
-  description: "创建一个公共组件",
+  description: "创建组件",
   prompts: [
     {
       type: "input",

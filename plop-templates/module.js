@@ -1,5 +1,5 @@
 export default {
-  description: "创建一个模块",
+  description: "添加模块",
   prompts: [
     {
       type: "input",
