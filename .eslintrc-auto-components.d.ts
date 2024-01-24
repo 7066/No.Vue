@@ -14,6 +14,7 @@ declare module "vue" {
     IconCaretLeft: (typeof import("~icons/ep/caret-left"))["default"];
     IconCompass: (typeof import("~icons/ep/compass"))["default"];
     NoCard: (typeof import("./src/components/NoCard/index.vue"))["default"];
+    NoDd: (typeof import("./src/components/NoDd/index.vue"))["default"];
     RouterLink: (typeof import("vue-router"))["RouterLink"];
     RouterView: (typeof import("vue-router"))["RouterView"];
   }

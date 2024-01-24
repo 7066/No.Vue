@@ -40,22 +40,22 @@ export default {
       {
         type: "add",
         path: "src/modules/{{lowerCase module}}/views/index.vue",
-        templateFile: "build/templates/module/views/index.hbs",
+        templateFile: "build/plop/templates/module/views/index.hbs",
       },
       {
         type: "add",
         path: "src/modules/{{lowerCase module}}/route.ts",
-        templateFile: "build/templates/module/route.hbs",
+        templateFile: "build/plop/templates/module/route.hbs",
       },
       {
         type: "add",
         path: "src/modules/{{lowerCase module}}/service.ts",
-        templateFile: "build/templates/module/service.hbs",
+        templateFile: "build/plop/templates/module/service.hbs",
       },
       {
         type: "add",
         path: "src/modules/{{lowerCase module}}/store.ts",
-        templateFile: "build/templates/module/store.hbs",
+        templateFile: "build/plop/templates/module/store.hbs",
       },
     ];
     if (data.hasLocales) {
@@ -63,12 +63,12 @@ export default {
         {
           type: "add",
           path: "src/modules/{{lowerCase module}}/locales/zh.ts",
-          templateFile: "build/templates/module/locales/zh.hbs",
+          templateFile: "build/plop/templates/module/locales/zh.hbs",
         },
         {
           type: "add",
           path: "src/modules/{{lowerCase module}}/locales/en.ts",
-          templateFile: "build/templates/module/locales/en.hbs",
+          templateFile: "build/plop/templates/module/locales/en.hbs",
         },
       ]);
     }

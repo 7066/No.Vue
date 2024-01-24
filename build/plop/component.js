@@ -15,7 +15,7 @@ export default {
     {
       type: "add",
       path: "src/components/No{{pascalCase name}}/index.vue",
-      templateFile: "build/templates/component/index.hbs",
+      templateFile: "build/plop/templates/component/index.hbs",
     },
   ],
 };
