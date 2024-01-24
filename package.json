@@ -8,10 +8,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "commit-msg": "node ./plop-templates/commit-msg.js",
-    "module": "plop module",
-    "component": "plop component",
-    "commit": "plop commit"
+    "commit-msg": "node ./build/commit-msg",
+    "cli": "plop module"
   },
   "dependencies": {
     "axios": "^1.6.5",

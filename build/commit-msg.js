@@ -1,5 +1,5 @@
 import fs from "fs";
-export const emoji = {
+const emoji = {
   feat: " ✨  ",
   component: " 📦  ",
   fix: " 🐛  ",

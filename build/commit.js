@@ -1,5 +1,12 @@
 import { spawn } from "child_process";
-import { emoji } from "./commit";
+const emoji = {
+  feat: " ✨  ",
+  component: " 📦  ",
+  fix: " 🐛  ",
+  format: " 🎨  ",
+  style: " 💄  ",
+  refactor: " 💥  ",
+};
 // commitlint rule
 const choices = [
   {
