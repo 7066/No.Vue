@@ -1,0 +1,135 @@
+{
+  "id": "4422679",
+  "name": "No.Vue/Element-Plus",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13303093",
+      "name": "eslint",
+      "font_class": "eslint",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "13339880",
+      "name": "stylelint",
+      "font_class": "stylelint",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "30055933",
+      "name": "prettier",
+      "font_class": "prettier",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "35562009",
+      "name": "commitlint",
+      "font_class": "commitlint",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "38949324",
+      "name": "plop",
+      "font_class": "plop",
+      "unicode": "e6f1",
+      "unicode_decimal": 59121
+    },
+    {
+      "icon_id": "27271077",
+      "name": "typescript",
+      "font_class": "typescript",
+      "unicode": "ebc1",
+      "unicode_decimal": 60353
+    },
+    {
+      "icon_id": "27079304",
+      "name": "vite",
+      "font_class": "vite",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "11124972",
+      "name": "customize",
+      "font_class": "customize",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "248945",
+      "name": "dark",
+      "font_class": "dark",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "248946",
+      "name": "light",
+      "font_class": "light1",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "6496026",
+      "name": "Vue",
+      "font_class": "vue",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "18991760",
+      "name": "theme",
+      "font_class": "theme",
+      "unicode": "e888",
+      "unicode_decimal": 59528
+    },
+    {
+      "icon_id": "21901441",
+      "name": "vue-router",
+      "font_class": "vue-router",
+      "unicode": "e8c1",
+      "unicode_decimal": 59585
+    },
+    {
+      "icon_id": "22779598",
+      "name": "翻译",
+      "font_class": "translate",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "29846552",
+      "name": "pinia",
+      "font_class": "pinia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "32737954",
+      "name": "axios",
+      "font_class": "axios",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "33688367",
+      "name": "i18n",
+      "font_class": "vue-i18n",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "38403952",
+      "name": "element-plus",
+      "font_class": "element-plus",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    }
+  ]
+}

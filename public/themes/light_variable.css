@@ -1,7 +1,9 @@
 :root,
 :root.light {
-  --no-fill-color: #fff;
-  --el-color-primary: #dfd519;
+  /* 以下是自定义变量 */
+  --el-text-color-primary-overlay: #fff;
+  /* 以下是element-plus变量 */
+  --el-color-primary: #00ae97;
   --el-color-primary-light-3: #00ae97c9;
   --el-color-primary-light-5: #00ae979a;
   --el-color-primary-light-7: #00ae976d;
@@ -9,7 +11,6 @@
   --el-color-primary-light-9: #00ae9719;
   --border-color: var(--el-border-color);
   --el-menu-active-color: var(--el-text-color-primary);
-
   --el-color-success: #67c23a;
   --el-color-success-light-3: #95d475;
   --el-color-success-light-5: #b3e19d;

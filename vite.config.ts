@@ -37,9 +37,9 @@ export default defineConfig({
       imports: [
         "vue",
         "vue-router",
-        {
-          axios: [["default", "axios"]],
-        },
+        // {
+        //   axios: [["default", "axios"]],
+        // },
       ],
       dirs: [
         "./src/hooks" /**               */ /** 个性化支持 */,
@@ -54,6 +54,10 @@ export default defineConfig({
       },
     }),
     Components({
+      // dirs: ["src/components/**/index.vue"],
+      // extensions: ["index.vue"],
+      // globs: ["src/components/**/*.{vue}"],
+      // deep: false,
       resolvers: [
         ElementPlusResolver(),
         IconsResolver({

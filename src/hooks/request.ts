@@ -1,3 +1,4 @@
+import axios from "axios";
 const instance = axios.create({
   baseURL: "/",
   timeout: 60000,
@@ -16,7 +17,7 @@ instance.interceptors.request.use(
   function (error) {
     ElMessage.error("请求错误!");
     return Promise.reject(error);
-  }
+  },
 );
 
 // 添加响应拦截器
@@ -34,7 +35,7 @@ instance.interceptors.response.use(
     // 超出 2xx 范围的状态码都会触发该函数。
     ElMessage.error("服务器错误!");
     return Promise.reject(error);
-  }
+  },
 );
 
 export const request = instance;

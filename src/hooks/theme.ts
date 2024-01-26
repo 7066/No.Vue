@@ -25,7 +25,7 @@ export const useTheme = (): typeof _target => _target;
 /** @hooks 获取所有主题列表, 只读 */
 export const getThemes = () => readonly(_themes);
 /** @hooks 初始化 */
-(() => {
+export const INIT_THEME = () => {
   // 获取当前系统是否是暗色主题
   const _system = window.matchMedia("(prefers-color-scheme: dark)");
   // 接口请求
@@ -53,7 +53,7 @@ export const getThemes = () => readonly(_themes);
       _target.value = local;
     }
   });
-})();
+};
 
 /** @异步加载文件 */
 function lazy_loading(_: string) {

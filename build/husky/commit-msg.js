@@ -1,3 +1,4 @@
+// 美化 git commit 提交的信息
 import fs from "fs";
 const emoji = {
   feat: " ✨  ",

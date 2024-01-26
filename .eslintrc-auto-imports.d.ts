@@ -7,7 +7,7 @@ export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const ElMessage: typeof import('element-plus/es')['ElMessage']
-  const axios: typeof import('axios')['default']
+  const INIT_THEME: typeof import('./src/hooks/theme')['INIT_THEME']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']
@@ -19,7 +19,6 @@ declare global {
   const getThemes: typeof import('./src/hooks/theme')['getThemes']
   const h: typeof import('vue')['h']
   const i18n: typeof import('./src/hooks/i18n')['default']
-  const initTheme: typeof import('./src/hooks/theme')['initTheme']
   const inject: typeof import('vue')['inject']
   const isProxy: typeof import('vue')['isProxy']
   const isReactive: typeof import('vue')['isReactive']

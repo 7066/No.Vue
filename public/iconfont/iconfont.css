@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4422679 */
+  src: url('iconfont.woff2?t=1706184128394') format('woff2'),
+       url('iconfont.woff?t=1706184128394') format('woff'),
+       url('iconfont.ttf?t=1706184128394') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eslint:before {
+  content: "\e634";
+}
+
+.icon-stylelint:before {
+  content: "\e680";
+}
+
+.icon-prettier:before {
+  content: "\e684";
+}
+
+.icon-commitlint:before {
+  content: "\e610";
+}
+
+.icon-plop:before {
+  content: "\e6f1";
+}
+
+.icon-typescript:before {
+  content: "\ebc1";
+}
+
+.icon-vite:before {
+  content: "\e673";
+}
+
+.icon-customize:before {
+  content: "\e616";
+}
+
+.icon-dark:before {
+  content: "\e676";
+}
+
+.icon-light1:before {
+  content: "\e677";
+}
+
+.icon-vue:before {
+  content: "\e799";
+}
+
+.icon-theme:before {
+  content: "\e888";
+}
+
+.icon-vue-router:before {
+  content: "\e8c1";
+}
+
+.icon-translate:before {
+  content: "\e65c";
+}
+
+.icon-pinia:before {
+  content: "\e600";
+}
+
+.icon-axios:before {
+  content: "\e601";
+}
+
+.icon-vue-i18n:before {
+  content: "\e602";
+}
+
+.icon-element-plus:before {
+  content: "\e690";
+}
+

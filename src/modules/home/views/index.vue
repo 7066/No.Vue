@@ -5,7 +5,7 @@ const onClick = () => {
 };
 </script>
 <template>
-  home
+  ？？？ home
 
   {{ loginStore.user }}
 

@@ -1,5 +1,7 @@
 :root.dark {
-  --no-fill-color: #000;
+  /* 以下是自定义变量 */
+  --el-text-color-primary-overlay: #000;
+  /* 以下是element-plus变量 */
   --el-color-primary: #9064ff;
   --el-color-primary-light-3: #9064ffd6;
   --el-color-primary-light-5: #9064ffbb;
@@ -8,7 +10,6 @@
   --el-color-primary-light-9: #9064ff47;
   --border-color: var(--el-border-color);
   --el-menu-active-color: var(--el-text-color-primary);
-
   --el-color-success: #67c23a;
   --el-color-success-light-3: #4e8e2f;
   --el-color-success-light-5: #3e6b27;
