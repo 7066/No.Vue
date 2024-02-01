@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "prepare": "husky",
+    "prepare": "husky install",
     "commit-msg": "node ./build/husky/commit-msg.js",
     "p": "plop"
   },
