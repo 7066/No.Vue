@@ -1,4 +1,3 @@
-/** @type {import('cz-git').UserConfig} */
 module.exports = {
   rules: {
     "type-enum": [
