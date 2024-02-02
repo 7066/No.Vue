@@ -1,10 +1,10 @@
 import path from "path";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import IconsResolver from "unplugin-icons/resolver";
 import _vue from "@vitejs/plugin-vue";
 import _AutoImport from "unplugin-auto-import/vite";
 import _Components from "unplugin-vue-components/vite";
 import _Icons from "unplugin-icons/vite";
-import IconsResolver from "unplugin-icons/resolver";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export const vue = () => _vue();
 
