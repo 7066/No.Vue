@@ -9,7 +9,7 @@
     <!-- 内容布局 可参考 element-plus Layout 或 Container-->
     <template v-else>
       <!-- 判断全局指引字段 -->
-      <NoHi />
+      <!-- <NoHi /> -->
       <!-- 布局组件 -->
       包括头部, 侧边导航, 菜单
     </template>
