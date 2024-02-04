@@ -79,7 +79,7 @@ yarn p
           - Popup2.vue(组件2)
 ```
 
-> routejs 说明
+> route.js 说明
 
 ```js
 // route.js
@@ -119,4 +119,5 @@ export { route, meta };
 ## 代码规范检查
 
 > 统一代码风格
+
 > 使用 ESLint, Prettier 规范JS代码, Stylelint 规范样式代码, Commitlint 规范提交信息, 借助 Lint-Staged 同样会在提交时再次检查代码。
