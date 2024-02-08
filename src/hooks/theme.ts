@@ -28,31 +28,34 @@ export const getThemes = () => readonly(_themes);
 export const INIT_THEME = () => {
   // 获取当前系统是否是暗色主题
   const _system = window.matchMedia("(prefers-color-scheme: dark)");
+
   // 接口请求
-  return request.get("/api/themes").then((_data: any) => {
-    _data.forEach((_a: string) => {
-      // 添加主题列表
-      _themes.value.add(_a);
+  return request
+    .get("/api/themes", { headers: { openApi: true } })
+    .then((_data: any) => {
+      _data.forEach((_a: string) => {
+        // 添加主题列表
+        _themes.value.add(_a);
+      });
+
+      // 获取用户持久化设置
+      const local = localStorage.getItem("theme");
+
+      _code = 1; // 标记初始化触发
+
+      // 当用户首次登录, 或跟随系统主题时
+      if (!local || local === "auto") {
+        // 首次登录, 跟随系统主题
+        if (!local) localStorage.setItem("theme", "auto");
+        // 跟随系统设置 深色 主题
+        if (_system.matches) _target.value = "dark";
+        // 跟随系统设置 亮色 主题
+        else _target.value = "light";
+      } else {
+        // 用户已经选择了主题时
+        _target.value = local;
+      }
     });
-
-    // 获取用户持久化设置
-    const local = localStorage.getItem("theme");
-
-    _code = 1; // 标记初始化触发
-
-    // 当用户首次登录, 或跟随系统主题时
-    if (!local || local === "auto") {
-      // 首次登录, 跟随系统主题
-      if (!local) localStorage.setItem("theme", "auto");
-      // 跟随系统设置 深色 主题
-      if (_system.matches) _target.value = "dark";
-      // 跟随系统设置 亮色 主题
-      else _target.value = "light";
-    } else {
-      // 用户已经选择了主题时
-      _target.value = local;
-    }
-  });
 };
 
 /** @异步加载文件 */

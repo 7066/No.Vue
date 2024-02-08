@@ -62,12 +62,12 @@ export default {
       [].push.apply(_L, [
         {
           type: "add",
-          path: "src/modules/{{lowerCase module}}/locales/zh.ts",
+          path: "src/modules/{{lowerCase module}}/locales/zh.json",
           templateFile: "build/plop/templates/module/locales/zh.hbs",
         },
         {
           type: "add",
-          path: "src/modules/{{lowerCase module}}/locales/en.ts",
+          path: "src/modules/{{lowerCase module}}/locales/en.json",
           templateFile: "build/plop/templates/module/locales/en.hbs",
         },
       ]);

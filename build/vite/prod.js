@@ -1,6 +1,14 @@
 // import gzip from "vite-plugin-compression";
 // import { visualizer } from "rollup-plugin-visualizer";
-import { server, resolve, vue, AutoImport, Components, Icons } from "./config";
+import {
+  server,
+  resolve,
+  vue,
+  AutoImport,
+  Components,
+  Icons,
+  Csspxtoviewport,
+} from "./config";
 
 export default () => {
   return {
@@ -39,10 +47,10 @@ export default () => {
       // gzip(),
       // visualizer({ open: false }),
     ],
-    // css: {
-    //   postcss: {
-    //     plugins: [Csspxtoviewport],
-    //   },
-    // },
+    css: {
+      postcss: {
+        plugins: [Csspxtoviewport],
+      },
+    },
   };
 };

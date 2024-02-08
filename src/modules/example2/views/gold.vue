@@ -1,0 +1,1 @@
+<template>GOLD</template>

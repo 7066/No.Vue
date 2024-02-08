@@ -78,6 +78,10 @@
     "watchEffect": true,
     "watchPostEffect": true,
     "watchSyncEffect": true,
-    "ElMessage": true
+    "ElMessage": true,
+    "useMenuStore": true,
+    "isAllowed": true,
+    "useExample1Store": true,
+    "useExample2Store": true
   }
 }

@@ -1,8 +1,9 @@
 export default [
   {
-    label: "{{text}}",
-    icon: "{{lowerCase module}}",
-    code: "{{lowerCase module}}",
+    meta: {
+      code: "{{lowerCase module}}",
+      icon: "menu",
+    },
     path: "/{{lowerCase module}}",
     component: () => import("@/{{lowerCase module}}/views/index.vue"),
   },

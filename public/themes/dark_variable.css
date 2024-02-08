@@ -1,6 +1,7 @@
 :root.dark {
-  /* 以下是自定义变量 */
-  --el-text-color-primary-overlay: #000;
+  /* 项目变量 */
+  --border-box-shadow: rgba(255, 255, 255, 0.15);
+
   /* 以下是element-plus变量 */
   --el-color-primary: #9064ff;
   --el-color-primary-light-3: #9064ffd6;
@@ -8,8 +9,7 @@
   --el-color-primary-light-7: #9064ff89;
   --el-color-primary-light-8: #9064ff5c;
   --el-color-primary-light-9: #9064ff47;
-  --border-color: var(--el-border-color);
-  --el-menu-active-color: var(--el-text-color-primary);
+  --el-color-primary-dark-2: #46239e;
   --el-color-success: #67c23a;
   --el-color-success-light-3: #4e8e2f;
   --el-color-success-light-5: #3e6b27;
@@ -74,4 +74,12 @@
   --el-fill-color-blank: transparent;
   --el-mask-color: rgba(0, 0, 0, 0.8);
   --el-mask-color-extra-light: rgba(0, 0, 0, 0.3);
+
+  --bg-color-rgb: 0, 0, 0;
+  --bg-color-soft: #242424;
+  --bg-color-mute: #2c2c2c;
+  --code-tooltip-bg-color: rgba(var(--el-color-primary-rgb), 0.1);
+  --code-tooltip-color: var(--brand-color);
+  --purple-color: #9065db;
+  --purple-color-light: #6222c2;
 }

@@ -1,0 +1,6 @@
+{
+  "hi": "你好 {name}!",
+  "info": "你可以{action} until {limit} 距离出发仅几分钟",
+  "change": "改变你的航班",
+  "refund": "退票"
+}
