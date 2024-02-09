@@ -13,7 +13,7 @@ const a = new Set(["zh", "en"]);
 // b: 当前环境设置的语言类型，默认 zh
 const b: Ref<"zh" | "en"> = ref("zh");
 // c: 当前页面本地持久化缓存的语言类型 - 保留上一次用户切换的语言
-const c = localStorage.getItem("locale");
+const c = localStorage.getItem("LOCALE");
 if (c === "zh" || c === "en") b.value = c;
 // d: 当前环境已经加载的语言包
 const d = new Set([b.value]);
@@ -67,7 +67,7 @@ function lm(locale: string, translate = {}) {
           [module]: json,
         });
       });
-    })
+    }),
   );
 
   // 异步处理结束后, 改变国际化配置
@@ -82,7 +82,7 @@ function lm(locale: string, translate = {}) {
 /** @切换语言 */
 function sl(_: string) {
   i18n.global.locale = _;
-  localStorage.setItem("locale", _);
+  localStorage.setItem("LOCALE", _);
 }
 
 /** @异步加载 */

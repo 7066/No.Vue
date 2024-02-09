@@ -8,13 +8,13 @@
             <div style="display: inline-block; margin-right: 24px">
               <el-statistic title="青龙 Count" :value="_example2.count" />
               <el-button type="primary" plain @click="_example2.count += 1">
-                + Example1 Count</el-button
+                + Count</el-button
               >
             </div>
             <div style="display: inline-block">
               <el-statistic title="朱雀 Count" :value="_example1.count" />
               <el-button type="primary" plain @click="_example1.count += 1">
-                + Example2 Count</el-button
+                + Count</el-button
               >
             </div>
           </div>

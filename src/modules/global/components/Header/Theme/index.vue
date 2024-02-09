@@ -14,9 +14,13 @@ import Light from "./light.vue";
 import Dark from "./dark.vue";
 const v: Ref<boolean> = ref(true);
 const theme = useTheme();
-onMounted(() => {
-  v.value = theme.value === "dark" ? true : false;
-});
+watch(
+  () => theme.value,
+  (_) => {
+    console.log(_, "?-");
+    v.value = _ === "dark" ? true : false;
+  },
+);
 const onChange = (check: any) => {
   theme.value = check ? "dark" : "light";
 };

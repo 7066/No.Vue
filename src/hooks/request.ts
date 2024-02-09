@@ -7,16 +7,15 @@ const instance = axios.create({
 // 添加请求拦截器
 instance.interceptors.request.use(
   function (config) {
+    // 开放接口, 无需 TOKEN 即可请求
     const openApi = config.headers?.openApi || false;
-    // 如果是开发接口
     if (openApi) {
       return config;
     }
-    const token = localStorage.getItem("token");
-    if (!token) {
+    const TOKEN = localStorage.getItem("TOKEN");
+    if (!TOKEN) {
       ElMessage.error("登录状态失效, 即将退出登录!");
       setTimeout(() => {
-        localStorage.clear();
         location.href = location.origin + "/#/login";
       }, 1000);
     }

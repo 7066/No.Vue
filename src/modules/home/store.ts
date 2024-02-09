@@ -1,10 +1,4 @@
 import { defineStore } from "pinia";
 export const useHomeStore = defineStore("home", {
-  state: (): State => ({
-    title: "home",
-  }),
+  state: () => ({}),
 });
-
-interface State {
-  title: string;
-}

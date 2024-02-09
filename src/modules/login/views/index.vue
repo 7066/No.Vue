@@ -28,7 +28,7 @@
 <script lang="ts" setup>
 const onClick = (item: string) => {
   if (item === "go") {
-    localStorage.setItem("token", "7066");
+    localStorage.setItem("TOKEN", "7066");
     router.replace("/");
   }
 };

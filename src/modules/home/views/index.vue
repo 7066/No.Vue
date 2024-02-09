@@ -8,13 +8,13 @@
             <div style="display: inline-block; margin-right: 24px">
               <el-statistic title="青龙 Count" :value="_example2.count" />
               <el-button type="primary" plain @click="_example2.count += 1">
-                + Example1 Count</el-button
+                + Count</el-button
               >
             </div>
             <div style="display: inline-block">
               <el-statistic title="朱雀 Count" :value="_example1.count" />
               <el-button type="primary" plain @click="_example1.count += 1">
-                + Example2 Count</el-button
+                + Count</el-button
               >
             </div>
           </div>
@@ -46,12 +46,31 @@
           <el-button type="primary" @click="onCrazy">Crazy</el-button>
         </div>
       </el-col>
+      <el-col :span="12">
+        <div class="block">
+          <h2 class="title">路由模式</h2>
+          <div>
+            <el-button
+              type="primary"
+              :plain="_global.mode !== 'code'"
+              @click="onMode('code')"
+              >前端路由</el-button
+            >
+            <el-button
+              type="primary"
+              :plain="_global.mode !== 'url'"
+              @click="onMode('url')"
+              >后端路由</el-button
+            >
+          </div>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
 <script lang="ts" setup>
 import { Edit, Download } from "@element-plus/icons-vue";
-
+const _global = useGlobalStore();
 const _example1 = useExample1Store();
 const _example2 = useExample2Store();
 const editable = isAllowed("home", "edit");
@@ -59,6 +78,11 @@ const exportable = isAllowed("home", "export");
 const theme = useTheme();
 const onCrazy = () => {
   theme.value = "crazy";
+};
+const onMode = (mode: "code" | "url") => {
+  _global.mode = mode;
+  localStorage.setItem("MODE", mode);
+  router.go(0);
 };
 </script>
 <style lang="scss" scoped>

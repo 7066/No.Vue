@@ -1,11 +1,11 @@
 <template>
   <template v-for="(item, key) in props.data" :key="key">
-    <el-sub-menu v-if="item.children" index="1">
+    <el-sub-menu v-if="item.type === 'menu'" index="1">
       <template #title>
         <!-- <el-icon><location /></el-icon> -->
         <span>{{ item.label }}</span>
       </template>
-      <Menu :data="item.children" />
+      <Menu :data="item.children || []" />
     </el-sub-menu>
 
     <el-menu-item v-else :index="item.path">

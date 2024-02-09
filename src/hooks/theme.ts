@@ -1,6 +1,4 @@
 import { Ref, ref, watch, readonly } from "vue";
-console.info("执行主题文件");
-
 /** @_target - 当前主题, 采用 Ref 便于监听用户改变 */
 const _target: Ref<any> = ref("");
 
@@ -26,9 +24,9 @@ export const useTheme = (): typeof _target => _target;
 export const getThemes = () => readonly(_themes);
 /** @hooks 初始化 */
 export const INIT_THEME = () => {
+  console.info("初始化主题");
   // 获取当前系统是否是暗色主题
   const _system = window.matchMedia("(prefers-color-scheme: dark)");
-
   // 接口请求
   return request
     .get("/api/themes", { headers: { openApi: true } })
@@ -39,14 +37,14 @@ export const INIT_THEME = () => {
       });
 
       // 获取用户持久化设置
-      const local = localStorage.getItem("theme");
+      const local = localStorage.getItem("THEME");
 
       _code = 1; // 标记初始化触发
 
       // 当用户首次登录, 或跟随系统主题时
       if (!local || local === "auto") {
         // 首次登录, 跟随系统主题
-        if (!local) localStorage.setItem("theme", "auto");
+        if (!local) localStorage.setItem("THEME", "auto");
         // 跟随系统设置 深色 主题
         if (_system.matches) _target.value = "dark";
         // 跟随系统设置 亮色 主题
@@ -55,6 +53,8 @@ export const INIT_THEME = () => {
         // 用户已经选择了主题时
         _target.value = local;
       }
+
+      console.log(_target.value, "-");
     });
 };
 
@@ -85,7 +85,7 @@ function set_theme(_: any) {
   const _system = window.matchMedia("(prefers-color-scheme: dark)");
 
   // 获取当前的主题存储 local
-  const local = localStorage.getItem("theme");
+  const local = localStorage.getItem("THEME");
   if (
     (_system.matches === true && _ === "dark") ||
     (_system.matches === false && _ === "light")
@@ -100,14 +100,14 @@ function set_theme(_: any) {
     // B-1: 监听触发, 不改变本地持久化的主题, 且无需重复设置监听
     // B-2: 用户触发, 设置本地持久化的主题与系统一致, 且设置监听
     if (_code === 0) {
-      localStorage.setItem("theme", "auto");
+      localStorage.setItem("THEME", "auto");
       _system.addEventListener("change", onChange);
     }
   } else {
     // C: 本地持久化的主题与当前系统主题不一致
     // C-1: 设置本地持久化
     // C-2: 当触发时, 本地持久化为跟随系统时, 需要移除监听事件
-    localStorage.setItem("theme", _);
+    localStorage.setItem("THEME", _);
     if (local === "auto") {
       _system.removeEventListener("change", onChange);
     }
