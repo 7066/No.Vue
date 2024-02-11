@@ -25,6 +25,7 @@
     "h": true,
     "i18n": true,
     "inject": true,
+    "isAllowed": true,
     "isProxy": true,
     "isReactive": true,
     "isReadonly": true,
@@ -65,6 +66,8 @@
     "useAttrs": true,
     "useCssModule": true,
     "useCssVars": true,
+    "useExample1Store": true,
+    "useExample2Store": true,
     "useGlobalStore": true,
     "useHomeStore": true,
     "useLink": true,
@@ -78,10 +81,6 @@
     "watchEffect": true,
     "watchPostEffect": true,
     "watchSyncEffect": true,
-    "ElMessage": true,
-    "useMenuStore": true,
-    "isAllowed": true,
-    "useExample1Store": true,
-    "useExample2Store": true
+    "ElMessage": true
   }
 }

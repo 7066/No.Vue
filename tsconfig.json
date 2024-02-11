@@ -23,16 +23,9 @@
     "paths": {
       "@/*": ["./src/modules/*"],
       "#/*": ["./src/utils/*"],
-      "~/*": ["./src/assets/*"]
-    }
+      "~/*": ["./src/assets/*"],
+    },
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    ".d.ts",
-    ".eslintrc-auto-imports.d.ts",
-    ".eslintrc-auto-components.d.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "@types/*.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
