@@ -5,7 +5,7 @@ export default [
       icon: "",
     },
     path: "/404",
-    component: () => import("./views/index.vue"),
+    component: () => import("@/lost/views"),
   },
   {
     meta: {

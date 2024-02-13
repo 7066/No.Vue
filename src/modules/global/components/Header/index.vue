@@ -31,6 +31,7 @@ const onGithub = () => {
   justify-content: space-between;
   box-sizing: border-box;
   padding-right: 24px;
+  z-index: 1;
   .locales-wrap {
     margin: 0 12px;
   }
