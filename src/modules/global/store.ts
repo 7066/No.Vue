@@ -3,7 +3,7 @@ export const useGlobalStore = defineStore("global", {
   state: (): State => ({
     ins: new Map(),
     menu: [],
-    mode: "url",
+    mode: "staticMatch",
   }),
 });
 
@@ -12,6 +12,6 @@ interface State {
   ins: Map<string, Set<"edit" | "export">>;
   // 菜单
   menu: Array<any>;
-  // 路由加载模式 code - 前端路由，url - 后端路由
-  mode: "code" | "url";
+  // 路由加载模式 staticMatch - 前端静态匹配路由; dynamicLoad - 后端动态加载路由
+  mode: "staticMatch" | "dynamicLoad";
 }

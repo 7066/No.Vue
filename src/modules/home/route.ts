@@ -2,9 +2,9 @@ export default [
   {
     meta: {
       code: "home",
-      icon: "menu",
+      icon: "Operation",
     },
     path: "/home",
-    component: () => import("./views/index.vue"),
+    component: () => import("@/home/views/index.vue"),
   },
 ];

@@ -17,7 +17,6 @@ const theme = useTheme();
 watch(
   () => theme.value,
   (_) => {
-    console.log(_, "?-");
     v.value = _ === "dark" ? true : false;
   },
 );

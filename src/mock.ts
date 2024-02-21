@@ -58,15 +58,16 @@ Mock.mock("/api/user/menu1", "get", () => {
 // 后端路由返回数据
 const M2JSON = [
   {
+    type: "menu",
     label: "加载不出来的目录",
-    type: "menu",
+    icon: "WarningFilled",
     children: [
       {
         // 比如开发人员动态添加了路由, 但是文件代码 并没有合并主分支
         // 其他开发人员不受影响
         type: "module",
         meta: {
-          icon: "menu",
+          icon: "Open",
           code: "home2",
           operate: ["edit", "export"],
         },
@@ -76,13 +77,13 @@ const M2JSON = [
     ],
   },
   {
+    type: "menu",
     label: "没有相关文件的路由不会加载",
-    type: "menu",
     children: [
       {
         type: "module",
         meta: {
-          icon: "menu",
+          icon: "Finished",
           code: "home",
           operate: ["edit", "export"],
         },
@@ -104,39 +105,62 @@ const M2JSON = [
     ],
   },
   {
-    label: "自定义目录A",
     type: "menu",
+    label: "目录A",
+    icon: "WarningFilled",
     children: [
       {
         type: "module",
         meta: {
-          icon: "menu",
+          icon: "PieChart",
           code: "home",
           operate: ["edit", "export"],
         },
         path: "/home",
         component: "home/views/index",
+      },
+      {
+        type: "module",
+        meta: {
+          icon: "Bell",
+          code: "example1",
+          operate: ["export"],
+        },
+        path: "/example1",
+        component: "example1/views/index",
+      },
+      {
+        type: "module",
+        meta: {
+          icon: "Odometer",
+          code: "example1",
+          operate: ["export"],
+        },
+        path: "/example1",
+        component: "example1/views/index",
       },
     ],
   },
   {
     type: "module",
     meta: {
-      icon: "menu",
+      icon: "HelpFilled",
       code: "example1",
       operate: ["export"],
     },
     path: "/example1",
     component: "example1/views/index",
   },
+
   {
-    label: "自定义目录B",
     type: "menu",
+    label: "目录B",
+    icon: "Promotion",
     children: [
       {
         type: "module",
         meta: {
-          icon: "menu",
+          icon: "StarFilled",
           code: "example2",
           operate: ["edit"],
         },
@@ -164,7 +188,50 @@ const M2JSON = [
             meta: {
               label: "蓝桃",
             },
-            path: "/example2/blue",
+            path: "/example2/blue/:id",
+            component: "example2/views/blue",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: "menu",
+    label: "目录77",
+    icon: "Promotion",
+    children: [
+      {
+        type: "module",
+        meta: {
+          icon: "StarFilled",
+          code: "example2",
+          operate: ["edit"],
+        },
+        path: "/example2",
+        component: "example2/views/index",
+        children: [
+          {
+            type: "module",
+            meta: {
+              label: "红桃",
+            },
+            path: "/",
+            component: "example2/views/red",
+          },
+          {
+            type: "module",
+            meta: {
+              label: "金桃",
+            },
+            path: "/example2/gold",
+            component: "example2/views/gold",
+          },
+          {
+            type: "module",
+            meta: {
+              label: "蓝桃",
+            },
+            path: "/example2/blue/:id",
             component: "example2/views/blue",
           },
         ],

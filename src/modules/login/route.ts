@@ -5,6 +5,6 @@ export default [
       icon: "",
     },
     path: "/login",
-    component: () => import("./views/index.vue"),
+    component: () => import("@/login/views/index.vue"),
   },
 ];

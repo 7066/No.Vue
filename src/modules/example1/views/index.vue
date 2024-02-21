@@ -40,16 +40,37 @@
           </div>
         </div>
       </el-col>
-      <el-col :span="12"><div class="grid-content ep-bg-purple" /></el-col>
+      <el-col :span="12">
+        <div class="block">
+          <h2 class="title">接口代理请求</h2>
+
+          <div>
+            <el-button type="primary" @click="onSuccess"> 成功示例</el-button>
+            <el-button type="warning" @click="onWarning"> 失败示例</el-button>
+          </div>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
 <script lang="ts" setup>
 import { Edit, Download } from "@element-plus/icons-vue";
+import { api_search, api_search2 } from "@/example1/service";
 const _example1 = useExample1Store();
 const _example2 = useExample2Store();
 const editable = isAllowed("example1", "edit");
 const exportable = isAllowed("example1", "export");
+const onSuccess = () => {
+  api_search().then(() => {
+    ElMessage.success("请求成功. 请在控制台 Network 查看");
+  });
+};
+
+const onWarning = () => {
+  api_search2().then(() => {
+    // ElMessage.success("请求成功. 请在控制台 Network 查看");
+  });
+};
 </script>
 <style lang="scss" scoped>
 .example1-wrap {

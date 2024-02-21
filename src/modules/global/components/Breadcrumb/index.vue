@@ -19,7 +19,12 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const matched = computed(() => route.matched);
+const matched = computed(() => {
+  if (route.path === "/404") {
+    return [];
+  }
+  return route.matched;
+});
 </script>
 
 <style lang="scss" scoped>

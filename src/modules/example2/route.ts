@@ -2,7 +2,7 @@ export default [
   {
     meta: {
       code: "example2",
-      icon: "menu",
+      icon: "HelpFilled",
     },
     path: "/example2",
     component: () => import("@/example2/views/index.vue"),
@@ -25,7 +25,7 @@ export default [
         meta: {
           label: "蓝",
         },
-        path: "blue",
+        path: "blue/:id",
         component: () => import("@/example2/views/blue.vue"),
       },
     ],

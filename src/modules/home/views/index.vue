@@ -52,14 +52,14 @@
           <div>
             <el-button
               type="primary"
-              :plain="_global.mode !== 'code'"
-              @click="onMode('code')"
+              :plain="_global.mode !== 'staticMatch'"
+              @click="onMode('staticMatch')"
               >前端路由</el-button
             >
             <el-button
               type="primary"
-              :plain="_global.mode !== 'url'"
-              @click="onMode('url')"
+              :plain="_global.mode !== 'dynamicLoad'"
+              @click="onMode('dynamicLoad')"
               >后端路由</el-button
             >
           </div>
@@ -79,7 +79,7 @@ const theme = useTheme();
 const onCrazy = () => {
   theme.value = "crazy";
 };
-const onMode = (mode: "code" | "url") => {
+const onMode = (mode: "staticMatch" | "dynamicLoad") => {
   _global.mode = mode;
   localStorage.setItem("MODE", mode);
   router.go(0);

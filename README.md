@@ -129,3 +129,5 @@ export default [
 > 集成 ESLint、Prettier 进行JS代码的自动格式化和规范检查
 
 > 使用 stylelint 检查与格式化样式代码
+
+TODO env 环境变量

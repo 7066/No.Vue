@@ -2,9 +2,7 @@
   <!-- 作布局拦截 -->
   <div :class="['global', single ? 'single' : 'container']">
     <!-- 单布局 -->
-    <template v-if="single">
-      <router-view></router-view>
-    </template>
+    <template v-if="single"> <router-view></router-view>2 </template>
 
     <!-- 内容布局 -->
     <template v-else>
@@ -67,7 +65,7 @@ const single = computed(() =>
           padding: 12px;
           box-sizing: border-box;
           border-radius: 6px;
-          box-shadow: var(--border-box-shadow) 0px 0px 24px;
+          box-shadow: var(--border-box-shadow) 0 0 24px;
           .module {
             width: 100%;
             height: 100%;

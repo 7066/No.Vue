@@ -1,0 +1,10 @@
+export default [
+  {
+    meta: {
+      code: "{{lowerCase code}}",
+      icon: "menu",
+    },
+    path: "/{{lowerCase code}}",
+    component: () => import("@/{{lowerCase code}}/views/index.vue"),
+  },
+];

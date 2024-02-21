@@ -35,6 +35,13 @@ const onClick = (item: string) => {
 const onGit = () => {
   window.open("https://github.com/7066/No.Vue", "_blank");
 };
+
+onMounted(() => {
+  NProgress.start();
+  // 清除Token
+  localStorage.removeItem("TOKEN");
+  NProgress.done();
+});
 const list = [
   "axios",
   "pinia",
@@ -147,14 +154,15 @@ const bubbles = [
     .item {
       height: 136px;
       background-position: center !important;
+
       // box-shadow: inset #304b97 0px 0px 60px 2px;
       box-shadow: rgba(0, 0, 0, 0.15) 0 20px 15px;
-
       border-radius: 6px;
       background-repeat: no-repeat !important;
 
       &:hover {
-        box-shadow: #304b97 0px 0px 10px 2px inset;
+        box-shadow: #304b97 0 0 10px 2px inset;
+
         // box-shadow:
         //   0 -0.06em 0.1em hsl(0, 90%, 100%) inset,
         //   0 -0.15em 0.4em hsl(0, 90%, 45%) inset,
@@ -170,11 +178,11 @@ const bubbles = [
         @keyframes go-move {
           from {
             // box-shadow: #f20440 0px 0px 30px 10px;
-            box-shadow: rgba(0, 0, 0, 0.15) 0 0px 25px 5px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px 5px;
           }
           to {
             // box-shadow: #f20440 0px 0px 10px 10px;
-            box-shadow: #f20440 0 0px 25px 5px;
+            box-shadow: #f20440 0 0 25px 5px;
           }
         }
       }
@@ -229,7 +237,7 @@ const bubbles = [
           transform: translate(0, 20px);
         }
         to {
-          transform: translate(10px, 0px);
+          transform: translate(10px, 0);
         }
       }
     }

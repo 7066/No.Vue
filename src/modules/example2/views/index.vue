@@ -51,11 +51,21 @@
             <router-link to="/example2/gold" style="margin-right: 12px">
               <el-text type="primary" size="large">金</el-text>
             </router-link>
-            <router-link to="/example2/blue">
+            <router-link to="/example2/blue/23">
               <el-text type="primary" size="large">蓝</el-text>
             </router-link>
           </div>
           <router-view></router-view>
+        </div>
+      </el-col>
+      <el-col :span="12">
+        <div class="block">
+          <h2 class="title">404页面</h2>
+          <div>
+            <router-link to="/example2/gold404" style="margin-right: 12px">
+              <el-text type="primary" size="large">Go 404</el-text>
+            </router-link>
+          </div>
         </div>
       </el-col>
     </el-row>
