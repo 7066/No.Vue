@@ -1,5 +1,12 @@
 <template>
-  <div class="lost-wrap">404</div>
+  <div class="lost-wrap">
+    <el-empty description="404">
+      <el-button type="primary" @click="onClick">回首页</el-button>
+    </el-empty>
+  </div>
 </template>
-<script lang="ts" setup></script>
-<style lang="scss" scoped></style>
+<script lang="ts" setup>
+const onClick = () => {
+  router.replace("/home");
+};
+</script>

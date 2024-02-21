@@ -14,7 +14,6 @@ import prod from "./vite.prod";
 export default defineConfig(({ command, mode }) => {
   // 配置文件的变量通过 loadEnv 获取
   const env = loadEnv(mode, process.cwd());
-  console.log(mode, "?");
   let config;
   switch (mode) {
     case "development":
