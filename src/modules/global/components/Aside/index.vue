@@ -14,7 +14,10 @@ const active = ref("");
 watch(
   route,
   () => {
-    active.value = sessionStorage.getItem("MENU") || "";
+    const config = JSON.parse(sessionStorage.getItem("MENU") || "{}");
+    if (route.path in config) {
+      active.value = (config as any)[route.path];
+    }
   },
   {
     immediate: true,

@@ -24,6 +24,7 @@ declare module "vue" {
     ElSwitch: (typeof import("element-plus/es"))["ElSwitch"];
     ElTag: (typeof import("element-plus/es"))["ElTag"];
     ElText: (typeof import("element-plus/es"))["ElText"];
+    NoImage: (typeof import("./../src/components/NoImage/index.vue"))["default"];
     RouterLink: (typeof import("vue-router"))["RouterLink"];
     RouterView: (typeof import("vue-router"))["RouterView"];
   }

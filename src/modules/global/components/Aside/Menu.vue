@@ -33,7 +33,15 @@ const props = defineProps({
 });
 
 const onClick = (item: any) => {
+  const config = JSON.parse(sessionStorage.getItem("MENU") || "{}");
   router.push(item.path);
-  sessionStorage.setItem("MENU", item.id);
+  sessionStorage.setItem(
+    "MENU",
+    JSON.stringify(
+      Object.assign(config, {
+        [item.path]: item.id,
+      }),
+    ),
+  );
 };
 </script>
