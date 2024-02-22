@@ -24,7 +24,6 @@ export default defineConfig(({ command, mode }) => {
       break;
   }
   const { plugins = [], props = {} } = config;
-
   return Object.assign(
     {
       server: server(env),

@@ -8,16 +8,16 @@ import _Icons from "unplugin-icons/vite";
 import _Csspxtoviewport from "postcss-px-to-viewport-8-plugin";
 export const vue = () => _vue();
 
-export const server = () => ({
+export const server = (env) => ({
   host: true,
   open: true,
   base: "/",
   proxy: {
     /** @代理 */
-    "^/github": {
-      target: "https://api.github.com",
+    "^/api": {
+      target: env.VITE_PROXY,
       changeOrigin: true,
-      rewrite: (path) => path.replace(/^\/github/, ""),
+      rewrite: (path) => path.replace(/^\/api/, ""),
     },
   },
 });
