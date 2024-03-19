@@ -1,7 +1,0 @@
-{
-  "*.{js,jsx,ts,tsx}": ["eslint", "prettier --write"],
-  "package.json": ["prettier --write"],
-  "*.vue": ["eslint", "stylelint", "prettier --write"],
-  "*.{scss,less,css,html}": ["stylelint", "prettier --write"],
-  "*.md": ["prettier --write"]
-}

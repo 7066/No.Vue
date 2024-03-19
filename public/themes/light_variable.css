@@ -1,7 +1,0 @@
-:root,
-:root.light {
-  /* 项目变量 */
-  --border-box-shadow: rgba(0, 0, 0, 0.15);
-
-  /* 覆盖的 Element-Plus 变量*/
-}
